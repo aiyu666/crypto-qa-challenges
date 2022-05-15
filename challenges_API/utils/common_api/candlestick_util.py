@@ -1,8 +1,6 @@
-from email.policy import default
 from attr import attrs, attrib
 import os
 from dotenv import load_dotenv
-import logging
 from utils.common_util.requests_util import RestClient
 
 load_dotenv()

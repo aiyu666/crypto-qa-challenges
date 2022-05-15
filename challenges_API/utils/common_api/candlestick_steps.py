@@ -46,7 +46,7 @@ def verify_candlestick_data_is_correct_when_instrument_name_is_wrong(data: dict)
 def verify_candlestick_data_is_correct_when_params_without_required_parameter(data: dict):
     current_timestamp = datetime.now(timezone.utc)
     paste_two_min_unix_timestamp = current_timestamp.timestamp() - 120
-    current_timestamp = current_timestamp.timestamp()
+    current_timestamp = current_timestamp.timestamp() + 10
     response_timestamp = datetime.strptime(data["timestamp"], "%Y-%m-%dT%H:%M:%S.%f%z").timestamp()
     assert response_timestamp > paste_two_min_unix_timestamp
     assert current_timestamp > response_timestamp
