@@ -1,5 +1,5 @@
 .env
 __pycache__
-reports
+reports/*
 reports/assets
 testLog.txt
