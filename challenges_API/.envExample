@@ -1,1 +1,2 @@
-HOST=https://api.crypto.com/v2
+REST_API_HOST=https://api.crypto.com/v2
+WEBSOCKET_API_HOST=
