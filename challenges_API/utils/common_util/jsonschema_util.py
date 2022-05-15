@@ -4,9 +4,7 @@ from jsonschema import validate
 
 def check_schema_file_exist(file_path):
     if not os.path.exists(file_path):
-        logging.error(
-            f"The schema file is not found, please check it again, path: {file_path}"
-        )
+        logging.error(f"The schema file is not found, please check it again, path: {file_path}")
         raise
 
 
