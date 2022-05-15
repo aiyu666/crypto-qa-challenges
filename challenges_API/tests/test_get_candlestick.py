@@ -18,6 +18,7 @@ from utils.common_api.candlestick_steps import (
         ("BTC_USDT", "7D"), ("ETH_USDT", "14D"), ("YFI_USDT", "1M")
     ],
 )
+@pytest.mark.candlestick
 def test_user_can_get_candlestick(instrument_name, timeframe):
     response = user_can_get_candlestick_successfully(instrument_name, timeframe)
     verify_candlestick_data_is_correct(response, instrument_name, timeframe)
@@ -31,6 +32,7 @@ def test_user_can_get_candlestick(instrument_name, timeframe):
         ("BTC_USDT", "-100M"), ("ETH_USDT", "-15D",), ("YFI_USDT", "."),
     ],
 )
+@pytest.mark.candlestick
 def test_user_can_not_get_candlestick_with_wrong_timeframe(instrument_name, timeframe):
     response = user_can_not_get_candlestick_successfully(instrument_name, timeframe, "get_candlestick_failed_with_wrong_timeframe")
     verify_candlestick_data_is_correct_when_timeframe_is_wrong(response, timeframe)
@@ -42,6 +44,7 @@ def test_user_can_not_get_candlestick_with_wrong_timeframe(instrument_name, time
         ("@!#", "30m"), ("^", "1h"), ("!.", "4h"),
     ],
 )
+@pytest.mark.candlestick
 def test_user_can_not_get_candlestick_with_invalid_instrument_name(instrument_name, timeframe):
     response = user_can_not_get_candlestick_successfully(instrument_name, timeframe, "get_candlestick_failed_with_wrong_instrument_name")
     verify_candlestick_data_is_correct_when_instrument_name_is_wrong(response)
@@ -53,6 +56,7 @@ def test_user_can_not_get_candlestick_with_invalid_instrument_name(instrument_na
         ("TEST_TEST", None), ("^", None), ("USDT", None),
     ],
 )
+@pytest.mark.candlestick
 def test_user_can_not_get_candlestick_without_required_parameter(instrument_name, timeframe):
     response = user_can_not_get_candlestick_successfully(instrument_name, timeframe, "get_candlestick_failed_without_required_parameter", 400)
     verify_candlestick_data_is_correct_when_params_without_required_parameter(response)
