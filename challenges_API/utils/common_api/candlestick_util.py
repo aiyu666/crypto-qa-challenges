@@ -1,16 +1,14 @@
-from email.policy import default
 from attr import attrs, attrib
 import os
 from dotenv import load_dotenv
-import logging
-from utils.common_util.requests_util import Client
+from utils.common_util.requests_util import RestClient
 
 load_dotenv()
 
 
 @attrs
 class Candlestick(object):
-    client = Client()
+    client = RestClient()
     host = attrib(type=str, default=os.getenv("REST_API_HOST"))
     uri = attrib(type=str, default="/public/get-candlestick")
 

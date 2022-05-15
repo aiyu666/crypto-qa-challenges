@@ -1,2 +1,2 @@
 REST_API_HOST=https://api.crypto.com/v2
-WEBSOCKET_API_HOST=
+WEBSOCKET_API_HOST=wss://stream.crypto.com/v2
