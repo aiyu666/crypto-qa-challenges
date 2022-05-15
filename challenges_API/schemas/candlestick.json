@@ -1,0 +1,139 @@
+{
+  "get_candlestick_successfully": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "code": {
+        "type": "integer"
+      },
+      "method": {
+        "type": "string"
+      },
+      "result": {
+        "type": "object",
+        "properties": {
+          "instrument_name": {
+            "type": "string"
+          },
+          "depth": {
+            "type": "integer"
+          },
+          "interval": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "t": {
+                    "type": "integer"
+                  },
+                  "o": {
+                    "type": "number"
+                  },
+                  "h": {
+                    "type": "number"
+                  },
+                  "l": {
+                    "type": "number"
+                  },
+                  "c": {
+                    "type": "number"
+                  },
+                  "v": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "t",
+                  "o",
+                  "h",
+                  "l",
+                  "c",
+                  "v"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "instrument_name",
+          "depth",
+          "interval",
+          "data"
+        ]
+      }
+    },
+    "required": [
+      "code",
+      "method",
+      "result"
+    ]
+  },
+  "get_candlestick_failed_with_wrong_timeframe": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "code": {
+        "type": "integer"
+      },
+      "message": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "code",
+      "message"
+    ]
+  },
+  "get_candlestick_failed_with_wrong_instrument_name": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "code": {
+        "type": "integer"
+      },
+      "result": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "code",
+      "result",
+      "message"
+    ]
+  },
+  "get_candlestick_failed_without_required_parameter": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "timestamp": {
+        "type": "string"
+      },
+      "path": {
+        "type": "string"
+      },
+      "status": {
+        "type": "integer"
+      },
+      "error": {
+        "type": "string"
+      },
+      "requestId": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "timestamp",
+      "path",
+      "status",
+      "error",
+      "requestId"
+    ]
+  }
+}
