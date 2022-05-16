@@ -5,26 +5,6 @@
 ## Setting the global env
 1. Update the `.envExample` name to `.env`
 
-## How to run the test case?
-### Run all of tests
-    ```
-    pytest
-    ```
-
-### Run with tag
-    ```
-    pytest -m "<tag>"
-    ```
-
-### Run with test case name
-    ```
-    python -k "<test_case_name>"
-    ```
-
-## Report
-The report will generate in the reports folder.
-And the log file will also in there.
-
 ## Task 1
 ```
 pytest -m "candlestick"
@@ -50,3 +30,25 @@ pytest -k "test_user_can_go_to_nine_day_forecast"
 ```
 python capture_api/app.py
 ```
+
+
+
+## How to run the test case?
+### Run all of tests
+```
+pytest
+```
+
+### Run with tag
+```
+pytest -m "<tag>"
+```
+
+### Run with test case name
+```
+python -k "<test_case_name>"
+```
+
+## Report
+The report will generate in the reports folder.
+And the log file will also in there.
