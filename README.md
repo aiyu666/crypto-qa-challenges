@@ -15,11 +15,7 @@
     ```
 4. cd to project
     ```
-    cd challenges_API
-    ```
-    or
-    ```
-    challenges_app_UI
+    cd challenges
     ```
 
 ## Check code with pre-commit

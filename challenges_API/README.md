@@ -24,3 +24,29 @@
 ## Report
 The report will generate in the reports folder.
 And the log file will also in there.
+
+## Task 1
+```
+pytest -m "candlestick"
+```
+
+## Task 2
+```
+pytest -m "book_instrument_depth"
+```
+
+# Crypto APP Challenge
+
+## Task 1
+1. Open the android device
+2. Run the test case
+```
+pytest -k "test_user_can_go_to_nine_day_forecast"
+```
+
+## Task 2
+
+1. Run the script
+```
+python capture_api/app.py
+```
