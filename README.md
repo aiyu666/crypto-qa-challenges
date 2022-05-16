@@ -15,9 +15,15 @@
     ```
 4. cd to project
     ```
-    cd challenges_API
+    cd challenges
     ```
-    or
+
+## Check code with pre-commit
+### Load pre-commit config
     ```
-    challenges_app_UI
+    pre-commit install
+    ```
+### Check all of files
+    ```
+    pre-commit run --all-files
     ```
