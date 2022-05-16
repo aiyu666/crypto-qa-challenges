@@ -20,10 +20,10 @@
 
 ## Check code with pre-commit
 ### Load pre-commit config
-    ```
-    pre-commit install
-    ```
+```
+pre-commit install
+```
 ### Check all of files
-    ```
-    pre-commit run --all-files
-    ```
+```
+pre-commit run --all-files
+```
